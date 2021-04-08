@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Autocomplete Test</title>
         <meta name="description" content="This web page is designed to test the behaviur of browsers when using autocomplete attribute on input fields with incorrect control group">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <style>
+            input {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -19,12 +20,225 @@
         <h1>Autocomplete Test with Correct Control Group</h1>
         <form action="response.html"> 
             <label>
-                Birthday Month
-                <input name="bday" autocomplete="bday-month" />
+                Full name
+                <input name="fname" autocomplete="name" />
+            </label>
+            <label for="title">Title</label>
+            <select id="title">
+                <option>Ms</option>
+                <option>Mrs</option>
+                <option>Miss</option>
+                <option>Mr</option>
+                <option>Mx</option>
+                <option>Ms</option>
+                <option>Sir</option>
+                <option>Madam</option>
+                <option>Lord</option>
+                <option>Lady</option>
+            </select>
+            <label>
+                First name
+                <input name="gname" autocomplete="given-name" />
+            </label>
+            <label>
+                Middle name
+                <input name="mname" autocomplete="additional-name" />
+            </label>
+            <label>
+                Last name
+                <input name="gname" autocomplete="family-name" />
+            </label>
+            <label>
+                Honorific suffix, for example, "Jr.", "B.Sc"
+                <input name="suffix" autocomplete="honorific-suffix" />
+            </label>
+            <label>
+                Nickname
+                <input name="nickname" autocomplete="nickname" />
+            </label>
+            <label>
+                Job title
+                <input name="jtitle" autocomplete="organization-title" />
             </label>
             <label>
                 Username
                 <input name="username" autocomplete="username" />
+            </label>
+            <label>
+                New password
+                <input name="npassword" autocomplete="new-password" />
+            </label>
+            <label>
+                Current password
+                <input name="cpassword" autocomplete="current-password" />
+            </label>
+            <label>
+                Company name
+                <input name="cname" autocomplete="organization" />
+            </label>
+            <label>
+                Street address
+                <textarea name="saddress" autocomplete="street-address"></textarea>
+            </label>
+            <label>
+                Street address line 1
+                <input name="address1" autocomplete="address-line1" />
+            </label>
+            <label>
+                Street address line 2
+                <input name="address2" autocomplete="address-line2" />
+            </label>
+            <label>
+                Street address line 3
+                <input name="address3" autocomplete="address-line3" />
+            </label>
+            <label>
+                The fourth administrative level
+                <input name="address4" autocomplete="address-level4" />
+            </label>
+            <label>
+                The third administrative level
+                <input name="address5" autocomplete="address-level3" />
+            </label>
+            <label>
+                City
+                <input name="address6" autocomplete="address-level2" />
+            </label>
+            <label>
+                Post town
+                <input name="address7" autocomplete="address-level1" />
+            </label>
+            <label>
+                Country code
+                <input name="country" autocomplete="country" />
+            </label>
+            <label>
+                Country name
+                <input name="country" autocomplete="country-name" />
+            </label>
+            <label>
+                Post code
+                <input name="pcode" autocomplete="postal-code" />
+            </label>
+            <label>
+                Full name as on the payment card
+                <input name="ccname" autocomplete="cc-name" />
+            </label>
+            <label>
+                First name as on the payment card
+                <input name="ccfname" autocomplete="cc-given-name" />
+            </label>
+            <label>
+                Middle name as on the payment card
+                <input name="ccmname" autocomplete="cc-additional-name" />
+            </label>
+            <label>
+                Last name as on the payment card
+                <input name="cclname" autocomplete="cc-family-name" />
+            </label>
+            <label>
+                Card number
+                <input name="cnumber" autocomplete="cc-number" />
+            </label>
+            <label>
+                Card expiration date
+                <input name="cexdate" autocomplete="cc-exp" />
+            </label>
+            <label>
+                Card expiration month
+                <input name="cexmonth" autocomplete="cc-exp-month" />
+            </label>
+            <label>
+                Card expiration year
+                <input name="cexyear" autocomplete="cc-exp-year" />
+            </label>
+            <label>
+                Card security code
+                <input name="ccode" autocomplete="cc-csc" />
+            </label>
+            <label>
+                Card type
+                <input name="ctype" autocomplete="cc-type" />
+            </label>
+            <label>
+                Transaction currency
+                <input name="tcurrency" autocomplete="transaction-currency" />
+            </label>
+            <label>
+                Transaction amount
+                <input name="tamount" autocomplete="transaction-amount" />
+            </label>
+            <label>
+                Prefered language
+                <input name="lang" autocomplete="language" />
+            </label>
+            <label>
+                Birthday
+                <input name="bday" autocomplete="bday" />
+            </label>
+            <label>
+                Birthday day
+                <input name="bdayday" autocomplete="bday-day" />
+            </label>
+			<label>
+                Birthday month
+                <input name="bdaymonth" autocomplete="bday-month" />
+            </label>
+            <label>
+                Birthday month
+                <input name="bdayyear" autocomplete="bday-year" />
+            </label>
+            <label>
+                Gender
+                <input name="gender" autocomplete="sex" />
+            </label>
+            <label>
+                Online portfolio
+                <input name="url" autocomplete="url" />
+            </label>
+            <label>
+                Profile image
+                <input name="image" autocomplete="photo" />
+            </label>
+            <label>
+                Full telephone number
+                <input name="fnumber" autocomplete="tel" />
+            </label>
+            <label>
+                Country code- telephone number
+                <input name="ccodenumber" autocomplete="tel-country-code" />
+            </label>
+            <label>
+                Telephone number without country code
+                <input name="noccodenumber" autocomplete="tel-national" />
+            </label>
+            <label>
+                Area code- telephone number
+                <input name="acodenumber" autocomplete="tel-area-code" />
+            </label>
+            <label>
+                Telephone number without country code and area code
+                <input name="nocacodenumber" autocomplete="tel-local" />
+            </label>
+            <label>
+                First part of the area code- telephone number
+                <input name="acodeprefix" autocomplete="tel-local-prefix" />
+            </label>
+            <label>
+                Second part of the area code- telephone number
+                <input name="acodesuffix" autocomplete="tel-local-suffix" />
+            </label>
+            <label>
+                Internal extension- telephone number
+                <input name="icode" autocomplete="tel-extension" />
+            </label>
+            <label>
+                Email
+                <input name="email" autocomplete="email" />
+            </label>
+            <label>
+                Instant messaging protocol endpoint
+                <input name="impp" autocomplete="impp" />
             </label>
             <input type="submit" />
         </form>
